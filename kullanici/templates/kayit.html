@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<body>
+
+         <div class="container">
+
+<div class="container">
+<div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
+            <legend><i class="glyphicon glyphicon-globe"></i></a> Üye Ol</legend>
+            <form  action="/kayit/" method="POST" >
+                 {% csrf_token %}
+               <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control" name="username" placeholder="İsim" value="{{username}}" type="text" required />
+                </div>
+
+            </div>
+            <input class="form-control" name="email" placeholder="E - Posta" type="email" value="{{email}}" required />
+            <input class="form-control" name="reenteremail" placeholder="E - Posta Tekrar" type="email" required />
+
+
+            <input type="password" class="form-control" name="password" id="password1" placeholder="New Password" value="{{password}}" autocomplete="off">
+
+            <div class="col-xs-6 col-md-6">
+            <span id="8char" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> 8 Characters Long<br>
+            <span id="ucase" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> One Uppercase Letter
+            </div>
+            <div class="col-xs-6 col-md-6">
+            <span id="lcase" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> One Lowercase Letter<br>
+            <span id="num" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> One Number
+            </div>
+
+            <input type="password" class="form-control" name="password2" id="password2" placeholder="Repeat Password" autocomplete="off">
+
+            <div class="col-sm-12">
+            <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Passwords Match
+            </div>
+
+
+
+
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign up</button>
+            </form>
+        </div>
+    </div>
+                                        </div>
+
+</div>
+
+</div>
+</body>
+</html>
